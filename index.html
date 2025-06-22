@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eiffel Fragrantica - Parfum Elegant Berkualitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header px-6 py-4 flex flex-col md:flex-row md:justify-between items-center">
+    <div class="flex justify-between w-full md:w-auto items-center">
+      <h1 class="text-3xl font-bold text-yellow-400 flex items-center">
+        <i class="fas fa-spa mr-2"></i>Eiffel Fragrantica
+      </h1>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#home"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#products"><i class="fas fa-store"></i> Produk</a>
+            </li>
+            <li>
+              <a href="#about"
+                ><i class="fas fa-info-circle"></i> Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
+            </li>
+            <li>
+  <a href="#" id="cartButtonNavbar"
+    ><i class="fas fa-shopping-cart"></i> Keranjang (<span id="cartCount"
+      >0</span
+    >)</a
+  >
+</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Keharuman yang Memikat</h2>
+          <p>
+            Temukan parfum eksklusif dengan aroma yang tahan lama dan kemasan
+            elegan untuk setiap kesempatan.
+          </p>
+          <div class="cta-btns">
+            <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+            <a href="#about" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Koleksi Parfum Kami</h2>
+          <p>
+            Temukan aroma yang sempurna untuk setiap momen spesial dalam hidup
+            Anda.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-badge">Bestseller</div>
+            <div class="product-img">
+              <img src="img/parfum1.jpeg" alt="Kenzo Bali" />
+            </div>
+            <div class="product-info">
+              <h3>Kenzo Bali</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Kenzo Bali menawarkan aroma yang sensual, eksotis, dan menenangkan dengan sentuhan floral, fruity, dan woody. Aroma ini sering diibaratkan sebagai perpaduan anggrek, jeruk, dan rempah-rempah, memberikan kesan hangat dan penuh gairah. 
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('Kenzo Bali', 35000)">
+                  Beli Sekarang
+                </button>
+                <button class="cart-btn" onclick="addToCart('Kenzo Bali', 35000)">
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-badge">Bestseller</div>
+            <div class="product-img">
+              <img
+                src="img/parfum3.jpeg"
+                alt="Vanilla"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Vanilla</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Vanila  memiliki aroma manis, hangat, dan lembut, sering kali dikategorikan sebagai wangi gourmand karena mengingatkan pada aroma kue atau makanan manis. Aroma ini dapat memberikan kesan feminin, sensual, dan menenangkan.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="buy-btn"
+                  onclick="buyNow('Vanilla', 35000)"
+                >
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Vanilla', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-badge">Bestseller</div>
+            <div class="product-img">
+              <img
+                src="img/parfum2.jpeg"
+                alt="parfum2"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Pink Chifon</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Pink Chiffon cocok untuk penggunaan sehari-hari, memberikan kesan ceria dan lembut, serta dapat digunakan oleh wanita muda yang ingin tampil segar dan cantik. Aroma ini seringkali digambarkan sebagai aroma yang manis, lembut, dan tidak menyengat.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="buy-btn"
+                  onclick="buyNow('parfum2', 35000)"
+                >
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Vanilla', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="img/soft-Photoroom.jpg"
+                alt="Soft"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Soft</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Soft, wangi lembut, tidak menyengat, dan memberikan kesan segar serta kalem. Aroma soft biasanya memiliki karakter floral, fruity, atau powdery, dengan sentuhan vanilla atau musk yang memberikan kesan manis dan hangat. 
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('Soft', 35000)">
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Soft', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+                </div>
+            </div>
+          </div>
+                <!-- Product 5 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="img/J Lo Stil-Photoroom.jpg"
+                alt="J-Lo_Stil"
+              />
+            </div>
+            <div class="product-info">
+              <h3>J-Lo Stil</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                J Lo Still memiliki aroma floral yang lembut, manis, dan feminin, dipadu dengan aroma  bunga" yang kalem  seperti jasmine, lily of the valley, freesia, honeysuckle, orange blossom, dan rose menciptakan kesan yang elegan.
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('J-Lo_Stil', 35000)">
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('J-Lo_Stil', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+      <!-- Product 6 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="img/Paris Hilton-Photoroom.jpg"
+                alt="Paris Hilton"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Paris Hilton</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Paris Hilton dikenal dengan wangi yang manis, segar, dan feminin, dengan berbagai variasi seperti floral-fruity atau fruity-floral.  memiliki aroma yang lebih kuat dan tahan lama dan juga menawarkan wangi yang lebih lembut dan menyegarkan.
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('Paris Hilton', 35000)">
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Paris Hilton', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 7 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="img/Romantic Wish-Photoroom.jpg"
+                alt="Romantic Wish"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Romantic Wish</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Romantic Wish memiliki aroma floral-aquatic-green yang segar dan lembut. Wanginya didominasi oleh buah delima, bunga freesia, dan mentimun. Aroma ini menciptakan kesan manis dan segar. Cocok untuk wanita yang menyukai aroma feminin yang kalem dan elegan. 
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('Romantic Wish', 35000)">
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Romantic Wish', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 8 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="img/Victoria Scandal-Photoroom.jpg"
+                alt="Romantic Wish"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Victoria Scandal</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Victoria Scandal dibuat dengan detail yang bikin kamu tak bisa berhenti mencium aroma diri sendiri. Merek parfum yang satu ini memang tidak hanya terkenal dengan lingerie-nya yang ikonik, tapi juga dengan produk parfum yang selalu berhasil mencuri perhatian.
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('Victoria Scandal', 35000)">
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Victoria Scandal', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 9 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="img/Taylor Swift-Photoroom.jpg"
+                alt="Taylor Swift"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Victoria Scandal</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Taylor Swift menghadirkan keharuman yang segar dan menggoda dengan perpaduan buah-buahan segar dan bunga putih yang lembut. Sentuhan manis memberikan dimensi yang menyenangkan pada parfum ini, sementara aroma musk memberikan lapisan hangat dan sensual.
+              </p>
+              <div class="product-actions">
+                <button class="buy-btn" onclick="buyNow('Taylor Swift', 35000)">
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Taylor Swift', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>       
+          
+          <!-- Product 10 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img src="img/Bacarat-B-Photoroom (1).jpg" alt="Bacarat 30ml" />
+            </div>
+            <div class="product-info">
+              <h3>Bacarat 30ml</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Baccarat  terkenal dengan wangi oriental floral yang mewah dan tahan lama. Aroma utamanya adalah perpaduan antara saffron, jasmine, amberwood, dan ambergris, menciptakan kesan elegan,mewah dan memukau. 
+              </p>
+              <div class="product-actions">
+                <button
+                  class="buy-btn"
+                  onclick="buyNow('Bacarat 30ml', 35000)"
+                >
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Bacarat 30ml', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 11 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img src="img/HMNS-B-Photoroom (1).jpg" alt="Bacarat 30ml" />
+            </div>
+            <div class="product-info">
+              <h3>HMNS 30ml</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                HMNS Orgasm adalah parfum yang cocok untuk digunakan sehari-hari, terutama untuk menciptakan kesan romantis, mewah, dan feminin. 
+              </p>
+              <div class="product-actions">
+                <button
+                  class="buy-btn"
+                  onclick="buyNow('HMNS 30ml', 35000)"
+                >
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('HMNS 30ml', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 12 -->
+          <div class="product-card">
+            <div class="product-img">
+              <img src="img/Cristian Dior-B-Photoroom.jpg" alt="Bacarat 30ml" />
+            </div>
+            <div class="product-info">
+              <h3>Cristian Dior 30ml</h3>
+              <div class="price">Rp 35.000</div>
+              <p>
+                Cristian Dior dikenal dengan aroma bunga yang segar dan feminin, dengan campuran peony, iris, dan lily of the valley.
+              </p>
+              <div class="product-actions">
+                <button
+                  class="buy-btn"
+                  onclick="buyNow('Cristian Dior 30ml', 35000)"
+                >
+                  Beli Sekarang
+                </button>
+                <button
+                  class="cart-btn"
+                  onclick="addToCart('Cristian Dior 30ml', 35000)"
+                >
+                  <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang Eiffel Fragrantica</h2>
+          <p>
+            Kami menghadirkan keharuman terbaik dari seluruh dunia dengan
+            kualitas premium dan harga terjangkau.
+          </p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-img">
+            <img
+              src="img/Pink Sugar 30ml-Photoroom.jpg"
+              alt="Tentang Kami"
+            />
+          </div>
+
+          <div class="about-text">
+            <h3>Tentang Kami</h3>
+            <p>
+              PT. EIFFEL FRAGRANTICA – Perfume Expert Sejak 2020 Didirikan pada
+              tahun 2020, PT. EIFFEL FRAGRANTICA hadir sebagai Perfume Expert
+              yang mengusung kemewahan dan kualitas dalam setiap tetes aroma.
+              Berlokasi di jantung Lombok Timur, tepatnya di Lendang Nangka
+              Utara, Kecamatan Masbagik, kami menghadirkan koleksi parfum
+              eksklusif dengan sentuhan elegan dan bahan-bahan pilihan
+              berkualitas tinggi. Menggabungkan teknologi modern dengan seni
+              meracik wewangian.
+            </p>
+            <p>
+              PT. EIFFEL FRAGRANTICA menawarkan berbagai varian aroma — dari
+              yang lembut dan romantis hingga yang kuat dan memikat — yang
+              dirancang untuk mencerminkan kepribadian dan gaya hidup setiap
+              individu. Dengan semangat inovasi dan komitmen terhadap kualitas,
+              kami terus berkembang menjadi merek parfum lokal yang terpercaya
+              dan digemari, baik di pasar domestik maupun internasional. Setiap
+              produk kami bukan sekadar wewangian, tapi sebuah pengalaman.
+              Temukan aroma khasmu bersama PT. EIFFEL FRAGRANTICA – Perfume
+              Expert.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div>
+                  <h4>Kualitas Premium</h4>
+                  <p>
+                    Bahan-bahan terbaik dari sumber terpercaya di seluruh dunia.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <div>
+                  <h4>Ramah Lingkungan</h4>
+                  <p>Kemasan yang didesain dengan bahan ramah lingkungan.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                  <h4>Layanan Pelanggan</h4>
+                  <p>
+                    Tim kami siap membantu Anda 24/7 untuk semua kebutuhan
+                    parfum Anda.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <p>
+            Kami selalu senang mendengar dari Anda. Silakan hubungi kami melalui
+            informasi di bawah ini.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Lendang Nangka Utara, Kec.
+              Masbagik, Kab. Lombok Timur
+            </p>
+            <p><i class="fas fa-phone"></i> +6287845154595</p>
+            <p><i class="fas fa-envelope"></i> rinjanimaster54@gmail.com</p>
+            <p><i class="fas fa-clock"></i> Senin - Sabtu: 09:00 - 21:00 WIB</p>
+
+            <div class="social-links">
+              <a href="https://instagram.com/eiffelfragrantica" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <!-- <a href="https://facebook.com/eiffelfragrantica" target="_blank" 
+                ><i class="fab fa-facebook-f"></i
+              ></a>-->
+              <a href="https://wa.me/6287845154595" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+               
+          <!-- Maps  -->
+           <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31562.53794993144!2d116.41575680084763!3d-8.5654625672391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcc4aa6d09e2657%3A0x83b906e282880a4!2sNorth%20Lendang%20Nangka%2C%20Masbagik%2C%20East%20Lombok%20Regency%2C%20West%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1750466247007!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+           </div>
+
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form id="messageForm">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Eiffel Fragrantica</h3>
+            <p>
+              Menghadirkan keharuman eksklusif untuk melengkapi gaya hidup Anda.
+              Parfum berkualitas tinggi dengan aroma yang tahan lama.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Link Cepat</h3>
+            <ul>
+              <li><a href="#home">Beranda</a></li>
+              <li><a href="#products">Produk</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+
+           <!-- <ul><div class="footer-column">
+            <h3>Layanan Pelanggan</h3>
+            
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+              <li><a href="#">Pengembalian Produk</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul> -->
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Eiffel Fragrantica. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- My Javascript -->
+     <div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="closeCartModal">&times;</span>
+    <h2>Keranjang Belanja</h2>
+    <div id="cartModalContent">
+      <p>Keranjang masih kosong.</p> </div>
+    <div class="modal-footer">
+      <p>Total: <span id="cartModalTotal">Rp 0</span></p>
+      <button class="btn btn-primary" onclick="window.location.href='https://wa.me/6281907918418?text=Halo Eiffel Fragrantica, saya ingin menyelesaikan pesanan keranjang saya.'">
+        Checkout via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
